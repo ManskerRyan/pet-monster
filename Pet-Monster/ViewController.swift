@@ -16,11 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty1Img: UIImageView!
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
-    
+        //Constants
     let DIM_ALPHA: CGFloat = 0.2
     let OPAQUE: CGFloat = 1.0
     let MAX_PENALTIES = 3
-    
+        //Variables
     var penalties = 0
     var timer: NSTimer!
     
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
     
     //MARK: Functions
-    func itemDroppedOnCharacter(notif: AnyObject) {
+    func itemDroppedOnCharacter(notif: NSNotification) {
         
     }
     
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     }
     
     func changeGameState() {
-        ++penalties
+        penalties = penalties + 1
         
         if penalties == 1 {
             penalty1Img.alpha = OPAQUE
