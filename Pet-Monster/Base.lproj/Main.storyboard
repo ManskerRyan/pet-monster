@@ -73,8 +73,8 @@
                                     <constraint firstAttribute="width" constant="550" id="Mni-Px-cvS"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ivn-Lk-8Xp">
-                                <rect key="frame" x="155" y="166" width="290" height="98"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ivn-Lk-8Xp">
+                                <rect key="frame" x="0.0" y="166" width="290" height="98"/>
                                 <subviews>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="zXy-0Z-yNd" customClass="DragImg" customModule="Pet_Monster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
@@ -100,24 +100,45 @@
                                     <rect key="frame" x="55" y="166" width="290" height="98"/>
                                 </variation>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnG-jh-qMa">
+                                <rect key="frame" x="200" y="250" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="iRa-7r-nT2"/>
+                                    <constraint firstAttribute="width" constant="200" id="kPQ-xs-4Y0"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="replayButton"/>
+                                <connections>
+                                    <action selector="onReplayTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvb-ZD-CBF"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Replay?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vB8-LG-r9I">
+                                <rect key="frame" x="243" y="282" width="114.5" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9MR-lX-zif" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="0kU-PG-58p"/>
                             <constraint firstItem="ivn-Lk-8Xp" firstAttribute="top" secondItem="9MR-lX-zif" secondAttribute="bottom" constant="15" id="9bP-5C-R50"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dAO-Go-DzV" secondAttribute="bottom" constant="38" id="D2c-yJ-j0n"/>
+                            <constraint firstItem="vB8-LG-r9I" firstAttribute="centerX" secondItem="AnG-jh-qMa" secondAttribute="centerX" id="EfD-eg-28b"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qSp-xu-0V9" secondAttribute="bottom" id="EjC-aW-Hsd"/>
+                            <constraint firstItem="AnG-jh-qMa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GwS-sk-s52"/>
                             <constraint firstItem="ivn-Lk-8Xp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H80-Ro-hfG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ivn-Lk-8Xp" secondAttribute="trailing" constant="10" id="HsR-ka-Y9v"/>
                             <constraint firstItem="qSp-xu-0V9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="J2T-q4-72m"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iOS-bM-SzL" secondAttribute="bottom" id="JBD-Er-UIc"/>
                             <constraint firstItem="9MR-lX-zif" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rrr-Qf-VPa"/>
                             <constraint firstItem="Lx7-kS-IHd" firstAttribute="centerY" secondItem="9MR-lX-zif" secondAttribute="centerY" id="XU0-Mp-VWN"/>
+                            <constraint firstItem="AnG-jh-qMa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YrG-6H-5Nw"/>
                             <constraint firstAttribute="trailing" secondItem="qSp-xu-0V9" secondAttribute="trailing" id="Zhw-R0-X9a"/>
                             <constraint firstItem="ivn-Lk-8Xp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="hGF-xy-uIm"/>
                             <constraint firstItem="qSp-xu-0V9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i1i-xt-VSg"/>
                             <constraint firstItem="iOS-bM-SzL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nF6-Ce-SXz"/>
                             <constraint firstAttribute="trailing" secondItem="iOS-bM-SzL" secondAttribute="trailing" id="pIJ-kg-I9U"/>
+                            <constraint firstItem="vB8-LG-r9I" firstAttribute="centerY" secondItem="AnG-jh-qMa" secondAttribute="centerY" id="rr7-Yo-AEd"/>
                             <constraint firstItem="dAO-Go-DzV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-30" id="twf-SV-DJw"/>
                             <constraint firstItem="Lx7-kS-IHd" firstAttribute="centerX" secondItem="9MR-lX-zif" secondAttribute="centerX" id="wMu-mJ-Hlc"/>
                         </constraints>
@@ -148,6 +169,8 @@
                         <outlet property="penalty1Img" destination="daC-l6-LV2" id="Lkz-QJ-XhP"/>
                         <outlet property="penalty2Img" destination="Cxr-0O-Mcy" id="hXE-x1-z7d"/>
                         <outlet property="penalty3Img" destination="M7g-to-LSp" id="iZt-W5-SLv"/>
+                        <outlet property="replayBtn" destination="AnG-jh-qMa" id="a4i-ho-L1L"/>
+                        <outlet property="replayLbl" destination="vB8-LG-r9I" id="INq-gF-6Ud"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -162,6 +185,7 @@
         <image name="heart" width="95" height="98"/>
         <image name="idle1" width="889" height="615"/>
         <image name="livespanel" width="468" height="137"/>
+        <image name="replayButton" width="800" height="310"/>
         <image name="skull" width="95" height="98"/>
     </resources>
 </document>

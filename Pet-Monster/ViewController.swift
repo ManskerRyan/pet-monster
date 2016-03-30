@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty1Img: UIImageView!
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
+    @IBOutlet weak var replayBtn: UIButton!
+    @IBOutlet weak var replayLbl: UILabel!
         //Constants
     let DIM_ALPHA: CGFloat = 0.2
     let OPAQUE: CGFloat = 1.0
@@ -146,7 +148,28 @@ class ViewController: UIViewController {
     
     func gameOver() {
         timer.invalidate()
-        sfxDeath.play()
         monsterImg.playDeathAnimation()
+        sfxDeath.play()
+        
+        foodImg.alpha = DIM_ALPHA
+        foodImg.userInteractionEnabled = false
+        heartImg.alpha = DIM_ALPHA
+        heartImg.userInteractionEnabled = false
+        
+        replayBtn.hidden = false
+        replayLbl.hidden = false
+    }
+    
+    @IBAction func onReplayTapped(sender: UIButton) {
+        startTimer()
+        monsterImg.playIdleAnimation()
+        penalties = 0
+        
+        penalty1Img.alpha = DIM_ALPHA
+        penalty2Img.alpha = DIM_ALPHA
+        penalty3Img.alpha = DIM_ALPHA
+        
+        replayLbl.hidden = true
+        replayBtn.hidden = true
     }
 }
